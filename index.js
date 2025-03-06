@@ -16,8 +16,8 @@ const io = socketIo(server, {
 
 app.use(cors({
   origin: "https://lit-card-game.vercel.app",
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept", "Origin"],
   credentials: true
 }));
 
